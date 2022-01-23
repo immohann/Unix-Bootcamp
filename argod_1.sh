@@ -1,5 +1,12 @@
 echo "Hello World!"
 echo "$1 created"
-> 1000_$1.txt;
-> 1000_$2.txt;
+for name in $*
+do
+    
+    > 1000_$name.txt;
+    for variable in {1..1000};
+    do
+        echo "$variable $name" >> 1000_$name.txt;
+    done
+done
 echo "Created"
