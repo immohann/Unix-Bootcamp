@@ -1,10 +1,8 @@
-tr '[:upper:]' '[:lower:]' | tr '\n' ' ' <file.txt>file2.txt
-tr '\n' ' ' <file2.txt>file3.txt
-tr '`' ' ' <file3.txt>file4.txt 
-tr -d '[:punct:]'  <file4.txt>file5.txt
-tr -s ' '<file5.txt>file6.txt
-tr ' ' '\12' <file6.txt| sort | uniq -c | sort -nr | head > result.txt
-cat result.txt 
+
+
+# cat file.txt | tr '[:upper:]' '[:lower:]' | tr '\n' ' ' | tr ',' ' ' | tr '-' ' ' |  tr '_' ' ' | tr "?" " " | tr ":" " " | tr ";" " " | tr '"' ' ' | tr '`' ' ' | tr "'" " " |  tr "!" " " |tr "(" " " | tr ")" " " | tr "." " " |tr -s ' '| tr ' ' '\12'| sort | uniq -c | sort -n | tail > rest.txt
+cat file.txt | tr '[:upper:]' '[:lower:]' | tr '\n' ' ' | tr ',' ' ' | tr '-' ' ' |  tr '_' ' ' | tr "?" " " | tr ":" " " | tr ";" " " | tr '"' ' ' | tr '`' ' ' | tr "'" " " |  tr "!" " " |tr "(" " " | tr ")" " " | tr "." " " |tr -s ' '| tr ' ' '\12'|sort|uniq -c|sort -n > rest.txt
+cat rest.txt
 #echo 'whatever ad!' | tr -d '[:punct:]'
 
 
