@@ -1,8 +1,7 @@
 
-
 # cat file.txt | tr '[:upper:]' '[:lower:]' | tr '\n' ' ' | tr ',' ' ' | tr '-' ' ' |  tr '_' ' ' | tr "?" " " | tr ":" " " | tr ";" " " | tr '"' ' ' | tr '`' ' ' | tr "'" " " |  tr "!" " " |tr "(" " " | tr ")" " " | tr "." " " |tr -s ' '| tr ' ' '\12'| sort | uniq -c | sort -n | tail > rest.txt
-cat file.txt | tr '[:upper:]' '[:lower:]' | tr '\n' ' ' | tr ',' ' ' | tr '-' ' ' |  tr '_' ' ' | tr "?" " " | tr ":" " " | tr ";" " " | tr '"' ' ' | tr '`' ' ' | tr "'" " " |  tr "!" " " |tr "(" " " | tr ")" " " | tr "." " " |tr -s ' '| tr ' ' '\12'|sort|uniq -c|sort -n > rest.txt
-cat rest.txt
+echo "$*" | tr '[:upper:]' '[:lower:]' | tr '\n' ' ' | tr ',' ' ' | tr '-' ' ' |  tr '_' ' ' | tr "?" " " | tr ":" " " | tr ";" " " | tr '"' ' ' | tr '`' ' ' | tr "'" " " |  tr "!" " " |tr "(" " " | tr ")" " " | tr "." " " |tr -s ' '| tr ' ' '\12'|sort|uniq -c|sort -n | tail
+ 
 #echo 'whatever ad!' | tr -d '[:punct:]'
 
 

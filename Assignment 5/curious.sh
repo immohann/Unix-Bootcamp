@@ -1,2 +1,2 @@
-# echo "field1 field2 field3 field4" | grep -oP '(?<=field3 )[^ ]*'
-echo "$*" | tr -d '[:punct:]' | tr '\n' ' ' | tr -s ' '|grep -oP '(?<=curious )[^ ]*' | sort | uniq
+ans = "$ echo '$*' | tr '[:upper:]' '[:lower:]' | tr '\n' ' ' |  tr -s ' ' | grep -oP '(?<=curious )[^ ]*' | tr ',' ' ' |  tr '_' ' ' | tr '?' ' ' | tr ':' ' ' | tr ';' ' ' |  tr '!' ' ' |tr '(' ' ' | tr ')' ' ' | tr '.' ' '| tr -d ' '| uniq | sort|  uniq"
+echo $ans

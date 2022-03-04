@@ -1,8 +1,6 @@
 appearance
 as
-child
-creatures
-croquet-ground
+croquet
 dream
 feeling
 plan
