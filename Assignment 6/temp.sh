@@ -1,0 +1,1 @@
+curl `curl 'https://waterservices.usgs.gov/nwis/dv/?sites=04092440&format=json&period=P520W)' | jq '.[] '` 
