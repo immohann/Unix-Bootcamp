@@ -1,1 +1,1 @@
-curl `curl 'https://waterservices.usgs.gov/nwis/dv/?sites=04092440&format=json&period=P520W'| jq '.value.timeSeries.[].sourceInfo.siteName' ` 
+curl 'https://waterservices.usgs.gov/nwis/dv/?sites=04092440&format=json&period=P520W'| jq '.value' | jq '.timeSeries' |  jq '.[]' | jq '.values' | jq --slurp '.[0]' |jq '.[]' | jq '.value' | jq '.[]' | jq '.value' | tr '"' ' ' 
