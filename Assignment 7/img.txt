@@ -1,0 +1,1 @@
+		    		    <img src="newimages/large/ovc.png" alt="" class="pull-left" />
