@@ -7,7 +7,10 @@ image:
 	echo 'https://forecast.weather.gov/' | cat - imag.txt | tr '\n' ' '| tr -d "[:space:]" > temp && mv temp imag.txt
 	wget -c `cat imag.txt` -O image.png
 
-
 report.tex:
-	$(pdflatex report.tex)
+	IMG=image.png;TMP=`cat celc.txt`;\
+	IMG="$$IMG" TMP="$$TMP" envsubst < report.tmpl > report.tex
+
+report.pdf:
+	pdflatex report.tex
 	curl https://forecast.weather.gov/MapClick.php?CityName=Chicago&state=IL&site=LOT&textField1=41.837&textField2=-87.685&e=1 --output data.txt
